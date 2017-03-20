@@ -1,7 +1,8 @@
 angular 
 	.module('createAList', [
 		'ui.router',
-		'createAList.dashboard'
+		'createAList.dashboard',
+		'createAList.home'
 		])
 
 	.config(createAListConfig); 

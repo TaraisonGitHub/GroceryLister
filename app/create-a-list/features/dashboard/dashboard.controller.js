@@ -5,5 +5,5 @@ angular
 function DashboardCtrl($http) {
 	var vm = this;
 	vm.itemName = 'broccoli';
-
+	
 }
