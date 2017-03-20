@@ -2,9 +2,8 @@ angular
 	.module('createAList.dashboard')
 	.controller('DashboardCtrl', DashboardCtrl);
 
-function DashboardCtrl() {
+function DashboardCtrl($http) {
 	var vm = this;
-
-	vm.itemName = 'tara';
+	vm.itemName = 'broccoli';
 
 }
