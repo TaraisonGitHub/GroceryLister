@@ -1,12 +1,41 @@
+
 <div id="wrapper">
 
-	<div id="Welcome">
+	<div id="welcome">
 		<h1>Welcome to Grocery Lister!</h1>
 	</div>
-
+<style>
+#sign-in {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top:20px;
+    display: none;
+}
+</style>
 	<div id="sign-sign">
-		<h2 ng-model="">Sign In</h2> or <h2>Sign Up</h2>
+		<!--Note: The element will not take up any space when the display property set to "none".-->
+		<button onclick="signIn()"><h2>Sign In</h2></button>
+		<br />
+		or
+		<br />
+		<h2>Sign Up</h2>
+
+
 	</div>
 
+	<div id="sign-in">
+		<form>
+			First name:<br>
+			<input type="text" ng-model="DashboardVM.itemName"><br>
+		</form>
+	</div>
+
+
 </div>
+
+
+
+
 
