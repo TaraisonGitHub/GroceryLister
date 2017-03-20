@@ -6,15 +6,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 
 	<script type="text/javascript">
-	
+
 		function signIn() {
-    	var x = document.getElementById('sign-in');
+    		var x = document.getElementById('sign-in');
     		if (x.style.display === 'none') {
         	x.style.display = 'block';
     		} else {
         	x.style.display = 'none';
     		}
     		
+		}
+
+		function addUsername() {
+    		var y = document.getElementById("add-u-n").text = "hello";
+    		console.log(y);
+		
 		}
 	</script>
 </head>
