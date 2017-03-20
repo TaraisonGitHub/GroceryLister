@@ -18,8 +18,11 @@
 		}
 
 		function addUsername() {
-    		var y = document.getElementById("add-u-n").text = "hello";
-    		console.log(y);
+    		var y = document.getElementById("username").value;
+    		console.log('task', y.trim());
+    		document.getElementById('myForm').reset();
+
+
 		
 		}
 	</script>
