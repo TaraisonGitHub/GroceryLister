@@ -5,5 +5,4 @@ angular
 function DashboardCtrl() {
 	var vm = this;
 
-	vm.userName = 'Tara';
 	}
