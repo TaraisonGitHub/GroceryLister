@@ -16,17 +16,18 @@
     		}	
 		}
 
-		function addUsername() {
-    		var y = document.getElementById('username').value;
-    		localStorage.setItem('name', y.trim());
-    		document.getElementById('myForm').reset();
-		}
+		// function addUsername() {
+  //   		var y = document.getElementById('username').value;
+  //   		localStorage.setItem('name', y.trim());
+  //   		document.getElementById('myForm').reset();
+		// }
 
 	</script>
 </head>
 <body ng-app="createAList">
 	<ui-view></ui-view>
 
+	<!-- the module file has to come first (before the controller file or directive file) -->
 	<script type="text/javascript" src="create-a-list/createAList.module.js"></script>
 	<script type="text/javascript" src="create-a-list/features/dashboard/dashboard.module.js"></script>
 	<script type="text/javascript" src="create-a-list/features/dashboard/dashboard.route.js"></script>
@@ -35,5 +36,9 @@
 	<script type="text/javascript" src="create-a-list/features/home/home.module.js"></script>
 	<script type="text/javascript" src="create-a-list/features/home/home.route.js"></script>
 	<script type="text/javascript" src="create-a-list/features/home/home.controller.js"></script>
+
+	<script type="text/javascript" src="create-a-list/features/components/list/list.module.js"></script>
+	<script type="text/javascript" src="create-a-list/features/components/list/list.directive.js"></script>
+
 </body>
 </html>

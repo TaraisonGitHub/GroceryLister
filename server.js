@@ -1,7 +1,12 @@
 
-// ==== Express =========================================
+// ==== Dependencies =======================================================
 
 var express = require('express');
+var bodyParser = require("body-parser");
+var logger = require("morgan");
+var mongoose = require("mongoose");
+
+
 var app = express();
 var port = 5400;
 
