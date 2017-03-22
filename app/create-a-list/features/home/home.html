@@ -1,4 +1,31 @@
-<h1 ng-bind="name">Welcome, {{HomeVM.username}} !</h1>
+div class="w3-container"> 
 
-<button>New List</button>
+<h1 ng-bind="name">Welcome, {{ListVM.username}} !</h1>
 
+<button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">&#9998; New List</button>
+
+<list></list>
+
+</div>
+
+
+<!--Trigger/Open the Modal //////////////////
+<button onclick="document.getElementById('id01').style.display='block'"
+class="w3-button">Open Modal</button>
+
+/////// The Modal //////////////////
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+      <p>Some text in the Modal..</p>
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="w3-container w3-teal">
+  <p>My footer information</p>
+</div>

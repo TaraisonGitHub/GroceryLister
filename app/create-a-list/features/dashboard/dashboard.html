@@ -1,5 +1,5 @@
 
-<div id="wrapper">
+<div class="w3-container">
 
 	<div id="welcome">
 		<h1>Welcome to Grocery Lister!</h1>
@@ -17,7 +17,7 @@
 
 	<div id="sign-sign">
 		<!--Note: The element will not take up any space when the display property set to "none".-->
-		<button onclick="signIn()"><h2>Sign In</h2></button>
+		<button class="w3-btn w3-green w3-ripple" onclick="signIn()"><h2>Sign In</h2></button>
 		<br />
 		or
 		<br />
@@ -29,12 +29,14 @@
 	<div id="sign-in">
 		<form id="myForm">
 
-		<!--This example is just with bidn -->
+		<!--This example is just with bind -->
 			Name:<br />
-			<input 	type="text" 
+			<input 	class="w3-input w3-border"
+					type="text" 
 					id="username"
 					ng-model="userName" /> 
-					<button id="add-u-n" 
+					<button class="w3-btn w3-green w3-ripple"
+							id="add-u-n" 
 							type="submit">
 							<a ng-href="/{{'create-a-list/features/home/home.html'}}">Add</button></a><br>
 
@@ -45,14 +47,16 @@
 
 		<!-- This example uses the viewmodel as shown in class -->
 			Name:<br />
-			<input 	type="text" 
+			<input 	class="w3-input w3-border"
+					type="text" 
 					id="username"
-					ng-model="DashboardVM.userName" /> 
-					<button id="add-u-n" 
+					ng-model="ListVM.userName" /> 
+					<button class="w3-btn w3-green w3-ripple" 
+							id="add-u-n" 
 							type="submit">
 							<a ng-href="/{{'create-a-list/features/home/home.html'}}">Add</button></a><br>
 
-					<p ng-bind="HomeVM.userName"></p>
+					<p ng-bind="ListVM.userName"></p>
 
 		</form>
 	</div>
@@ -66,5 +70,6 @@
 		</form>
 		-->
 
-
-
+<div class="w3-container w3-teal">
+  <p>My footer information</p>
+</div>
