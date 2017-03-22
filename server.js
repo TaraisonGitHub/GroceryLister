@@ -10,11 +10,42 @@ var mongoose = require("mongoose");
 var app = express();
 var port = 5400;
 
+// ==== Mongoose Database ========================================
+
+//----------------------------------------------------------------
+var Grocery = require('./groceryModel.js')
+//----------------------------------------------------------------
+
+mongoose.connect('mongodb://localhost/week18day3mongoose'); //replace with my new database
+var db = mongoose.connection;
+
+
+db.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
+});
+
+db.once("open", function() {
+  console.log("Mongoose connection successful!");
+});
+
+// ==== Express Methods ==========================================
+
+app.use(express.static(__dirname + '/public'));// replace with '/app'
+app.use(logger('dev'));
+  //(LIne 40) When extended is false, the value of the request object accepts a string or array; whe it is true it can accept any value
+app.use(bodyParser.urlencoded({extended: true})); 
+app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+//app.use(methodOverride());
+
+// ==== Express Event Listener ===================================
+
 app.use(express.static(__dirname + "/app"));
 
 app.listen(port, function() {
     console.log("listening on port:" + port);
 });
+
 
 // ==== XML2JSON =========================================
 

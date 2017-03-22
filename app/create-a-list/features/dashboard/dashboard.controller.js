@@ -6,4 +6,3 @@ function DashboardCtrl($http) {
 	var vm = this;
 
 	}
-
