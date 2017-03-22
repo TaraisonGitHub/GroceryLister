@@ -6,6 +6,8 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
+//var xml2js = require('xml2js').parseString;
+//var http = require('http'); // xml2js needs this as part of it's functionality
 
 var app = express();
 var port = 5400;

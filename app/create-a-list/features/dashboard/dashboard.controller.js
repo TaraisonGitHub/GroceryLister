@@ -2,7 +2,8 @@ angular
 	.module('createAList.dashboard')
 	.controller('DashboardCtrl', DashboardCtrl);
 
-function DashboardCtrl($http) {
+function DashboardCtrl() {
 	var vm = this;
 
+	vm.userName = 'Tara';
 	}

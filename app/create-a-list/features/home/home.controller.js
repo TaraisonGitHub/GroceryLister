@@ -4,5 +4,7 @@ angular
 
 function HomeCtrl() {
 	var vm = this;
+
+	vm.userName = 'Tara';
 	
 }

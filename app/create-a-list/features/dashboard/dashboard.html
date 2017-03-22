@@ -28,9 +28,31 @@
 
 	<div id="sign-in">
 		<form id="myForm">
+
+		<!--This example is just with bidn -->
 			Name:<br />
-			<input type="text" id="username"> <button id="add-u-n" type="submit" onclick="addUsername()"><a ng-href="/{{'create-a-list/features/home/home.html'}}">Add</button></a><br>
+			<input 	type="text" 
+					id="username"
+					ng-model="userName" /> 
+					<button id="add-u-n" 
+							type="submit">
+							<a ng-href="/{{'create-a-list/features/home/home.html'}}">Add</button></a><br>
+
+					<p ng-bind="userName"></p>
+
+
 			<!--<input type="text" id="useremail" > <button value="00" name="sampename" id="add-u-e" onclick="addUsername()">Add</button><br>-->
+
+		<!-- This example uses the viewmodel as shown in class -->
+			Name:<br />
+			<input 	type="text" 
+					id="username"
+					ng-model="DashboardVM.userName" /> 
+					<button id="add-u-n" 
+							type="submit">
+							<a ng-href="/{{'create-a-list/features/home/home.html'}}">Add</button></a><br>
+
+					<p ng-bind="HomeVM.userName"></p>
 
 		</form>
 	</div>
