@@ -10,7 +10,7 @@ var mongoose = require("mongoose");
 //var http = require('http'); // xml2js needs this as part of it's functionality
 
 var app = express();
-var port = 5400;
+var port = 5000;
 
 // ==== Mongoose Database ========================================
 

@@ -5,7 +5,7 @@ angular
 function dashboardConfig($stateProvider) {
 	$stateProvider.state({
 		name: 'dashboard',
-		url: '/',
+		url: '/dashboard',
 		templateUrl: '/create-a-list/features/dashboard/dashboard.html',
 		controller: 'DashboardCtrl',
 		controllerAs: 'DashboardVM'

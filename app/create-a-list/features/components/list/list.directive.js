@@ -18,4 +18,6 @@ function List() {
 
 function ListCtrl() {
     var vm = this; // vm stands for View Model - anything on "the vm" is exposed to the view
+
+    vm.userName = 'Jenny';
 }
