@@ -5,7 +5,12 @@ var express = require('express');
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require ('path');
+var Promise = require('bluebird');
 
+mongoose.Promise = Promise;
+
+var Book = require('./models/book.js')
 //var xml2js = require('xml2js').parseString;
 //var http = require('http'); // xml2js needs this as part of it's functionality
 
@@ -32,7 +37,6 @@ db.once("open", function() {
 
 // ==== Express Methods ==========================================
 
-
 app.use(express.static(__dirname + "/app"));
 
 app.use(logger('dev'));
@@ -40,8 +44,13 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-//app.use(methodOverride());
 
+// ==== CRUD =====================================================
+
+app.get('/', function(req, res) {
+  res.send(dashboard.html);
+  console.log("from the console");
+})
 // ==== Express Event Listener ===================================
 
 app.listen(port, function() {
