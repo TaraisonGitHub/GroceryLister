@@ -10,7 +10,11 @@ var Promise = require('bluebird');
 
 mongoose.Promise = Promise;
 
-var Book = require('./models/book.js')
+var Book = require('./models/book.js');
+//var routes = require('./app/index');
+//var dashboard = require('./app/create-a-list/features/dashboard');
+//var home = require('./app/create-a-list/features/home');
+
 //var xml2js = require('xml2js').parseString;
 //var http = require('http'); // xml2js needs this as part of it's functionality
 
@@ -45,7 +49,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
+
+
 // ==== CRUD =====================================================
+
+//app.use('/home', home);
+/// catch 404 and forward to error handler
+//app.use(function(req, res, next) {
+//    var err = new Error('Not Found');
+//    err.status = 404;
+//    next(err);
+//});
 
 app.get('/home', function(req, res) {
   res.sendFile(__dirname + '/list.html');
@@ -55,6 +69,7 @@ app.get('/home', function(req, res) {
 app.listen(port, function() {
     console.log("listening on port:" + port);
 });
+
 
 
 // ==== XML2JSON =========================================
