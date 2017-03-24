@@ -32,7 +32,9 @@ db.once("open", function() {
 
 // ==== Express Methods ==========================================
 
-app.use(express.static(__dirname + '/public'));// replace with '/app'
+
+app.use(express.static(__dirname + "/app"));
+
 app.use(logger('dev'));
   //(LIne 40) When extended is false, the value of the request object accepts a string or array; whe it is true it can accept any value
 app.use(bodyParser.urlencoded({extended: true})); 
@@ -41,8 +43,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 //app.use(methodOverride());
 
 // ==== Express Event Listener ===================================
-
-app.use(express.static(__dirname + "/app"));
 
 app.listen(port, function() {
     console.log("listening on port:" + port);

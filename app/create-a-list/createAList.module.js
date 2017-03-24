@@ -8,5 +8,5 @@ angular
 	.config(createAListConfig); 
 
 	function createAListConfig($urlRouterProvider) {
-		$urlRouterProvider.otherwise('/dashboard');
+		$urlRouterProvider.otherwise('/home');
 	}
