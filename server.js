@@ -47,9 +47,8 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // ==== CRUD =====================================================
 
-app.get('/', function(req, res) {
-  res.send(dashboard.html);
-  console.log("from the console");
+app.get('/home', function(req, res) {
+  res.sendFile(__dirname + '/list.html');
 })
 // ==== Express Event Listener ===================================
 

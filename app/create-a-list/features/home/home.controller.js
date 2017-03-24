@@ -29,14 +29,9 @@ function HomeCtrl($scope, $http) {
 		method: 'GET',
 		url: '/'
 	}).then(function(response) {
-		console.log("I received a get request");
-	});
-
-	$http({
-		method: 'GET',
-		url: '/'
-	}).then(function(response) {
-		console.log("the second request");
+		console.log("I got the data I requested");
+		$scope.person1 = response;
+		console.log(response);
 	});
 
 	console.log(vm.person1.name);
