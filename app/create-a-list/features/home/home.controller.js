@@ -8,21 +8,21 @@ function HomeCtrl($scope, $http) {
 	console.log("hello from the home controller");
 
 	vm.person1 = {
-		name: 'Cassandra',
-		email: 'CNO@example.com',
-		number: '(111)111-1111'
+		name: 'broccoli',
+		email: 'fresh',
+		number: '$2.39'
 	};
 
 	vm.person2 = {
-		name: 'Erika',
-		email: 'Erika@otaku.com',
-		number: '(090)444-2222'
+		name: 'milk',
+		email: 'dairy',
+		number: '$2.19'
 	};
 
 	vm.person3 = {
-		name: 'Tom',
-		email: 'Tanaka@dek.com',
-		number: '(090)333-3333'
+		name: 'cheese',
+		email: 'dairy',
+		number: '$3.00'
 	};
 
 	$http({
